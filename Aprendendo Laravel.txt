@@ -1,0 +1,38 @@
+PASSOS PARA LARAVEL
+
+- Instalar VScode
+
+- Instalar Composer
+
+- Instalar XAMMP
+
+- Instalar Laravel
+   - Abrir CMD ou TERMINAL para entrar na pasta via linha de código
+   - Ir para a raiz "cd\"
+   - Ir para pasta que o projeto vai ser instalada "cd [pasta]"
+   - Executar comando no CMD para instalar o Laravel
+      "composer create-project --prefer-dist laravel/laravel [NOME-DO-PROJETO]"
+   - No VScode escolher a pasta do projeto
+      - Abrir o arquivo de configuração ".env'
+      - Configurar com as informações de sua base de dados... exemplo...
+		DB_CONNECTION=mysql
+		DB_HOST=127.0.0.1
+		DB_PORT=3306
+		DB_DATABASE=cadastro // Nome do banco
+		DB_USERNAME=root     // Usuario
+		DB_PASSWORD=         // Senha
+   - Ativar o Apache e o MySql no XAMMP
+   - Iniciar projeto pelo CMD "php artisan serve"
+   - Acessar o projeto no navegador "localhost:8000"
+
+APRENDIZADO NO LARAVEL
+
+- Instalar o Laravel
+- Estrutura de pastas
+- Rotas [Routes] 2/2
+- Controllers 2/2
+   "php artisan make:controller Painel\\ProdutoController --resource"
+- Views
+
+
+

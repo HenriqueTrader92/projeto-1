@@ -1,0 +1,53 @@
+APRENDENDO GIT
+
+- Instalar git.
+- Comandos básicos:
+   Clear - (Limpa)
+   mkdir [nome-pasta] - (Criar pasta)
+   cd - (Mudar diretórios)
+   cd ../ - (Voltar diretório)
+   git --version
+   ls - Listar itens do diretório
+   touch [nome-do-arquivo] - Criar arquivo
+- Colocar arquivos na pasta do repositório GIT
+   git init
+- Git status
+   git status
+   git add [nome-do-arquivo]
+   git add . //Adiciona todos os arquivos
+   git rm --cached [nome-do-arquivo] //Retirar arquivo do repositorio
+- Configurações Globais
+   git config --global user.email = "[seu-email]"
+   git config --global user.name = "[seu-nome]"
+- COMMIT
+   git commit -m "[mensagem-sobre-modificação]"
+- LOG
+   git log
+   git log --stat
+   git log -p" //Mostra somente o ultimo
+   git log --since=[periodo]   // exp... git log --since=2.days
+- IGNORE
+   Criar arquivo .gitignore
+- CHECKOUT
+   git checkout [versao]
+- BRANCHES
+   git checkout -b [nome-do-branche]
+   git commit -a -m "[comentario]" // '-a' vai direto para seu branche
+- MARGE
+   git marge [nome-do-branche]
+
+USANDO GITHUB
+
+-Criar conta no GitHub
+-Criar repositório na sua conta
+-PUSH
+ *Colocar arquivos no repositório online
+   git remote add origin [link-repositorio]
+   git push -u origin master
+-Sincronização
+   git fetch origin //pre-sincronismo
+   git rebase origin/master // sincronismo
+-CLONE
+   git clone [link-repositório]
+   
+
