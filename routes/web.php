@@ -4,11 +4,12 @@ Route::resource('/painel/produtos', 'Painel\ProdutoController');
 
 route::group(['namespace' => 'Site'], function() {
     Route::get('/', 'SiteController@index');
-    Route::get('/empresa', 'SiteController@empresa');
+    Route::get('/contato', 'SiteController@contato');
 
     Route::get('/categoria/{id}', 'SiteController@categoria');
     Route::get('/categoria2/{id?}', 'SiteController@categoriaOp');
 });
+
 
 // Route::group(['prefix' => 'painel'/*, 'middleware' => 'auth'*/], function () {
 //     Route::get('/', function(){
