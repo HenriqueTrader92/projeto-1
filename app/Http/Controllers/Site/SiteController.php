@@ -16,8 +16,6 @@ class SiteController extends Controller
         //        'empresa'
         //    ]);
 
-        
-
         // $this->middleware('auth')     // Não passa nos que foram citados
         //     ->except([
         //         'index', 'empresa'
