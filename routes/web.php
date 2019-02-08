@@ -5,6 +5,7 @@ Route::resource('/painel/produtos', 'Painel\ProdutoController');
 route::group(['namespace' => 'Site'], function() {
     Route::get('/', 'SiteController@index');
     Route::get('/contato', 'SiteController@contato');
+    Route::get('/painel', 'SiteController@painel');
 
     Route::get('/categoria/{id}', 'SiteController@categoria');
     Route::get('/categoria2/{id?}', 'SiteController@categoriaOp');
