@@ -1,4 +1,4 @@
-APRENDENDO GIT
+4APRENDENDO GIT
 
 - Instalar git.
 - Comandos básicos:
@@ -42,7 +42,7 @@ USANDO GITHUB
 -Criar repositório na sua conta
 -PUSH
  *Colocar arquivos no repositório online
-   git remote add origin [link-repositorio]
+   git remote add origin [link-repositorio]  // Só usa a primeira vez
    git push -u origin master
 -Sincronização
    git fetch origin //pre-sincronismo

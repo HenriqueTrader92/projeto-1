@@ -33,6 +33,22 @@ APRENDIZADO NO LARAVEL
 - Controllers 2/2
    "php artisan make:controller Painel\\ProdutoController --resource"
 - Views
+- Sistema tamplete blade 3/3
+   unless // Verificação negativa
+-Migration
+   php artisan make:migration create_[nome-tabela]_table
+   composer dump-autoload
+   php artisan migrate
+      ***Lembrar de correção de erro na app/providers/AppServiceProvider.php
+           use Illuminate\Support\Facades\Schema;
+           Schema::defaultStringLength(191);
+  Refresh - Atualziar tabela
+    php artisan migrate:refresh
+-SEEDERS
+   php artisan make:seeder [nome-da-seeder]
+   php artisan db:seed
+-Models***
+   php artisan make:model [nome-do-model]
 
 
 
