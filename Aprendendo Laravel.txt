@@ -35,7 +35,7 @@ APRENDIZADO NO LARAVEL
 - Views
 - Sistema tamplete blade 3/3
    unless // Verificação negativa
--Migration
+-Migration - Criar tabelas
    php artisan make:migration create_[nome-tabela]_table
    composer dump-autoload
    php artisan migrate
@@ -44,11 +44,15 @@ APRENDIZADO NO LARAVEL
            Schema::defaultStringLength(191);
   Refresh - Atualziar tabela
     php artisan migrate:refresh
--SEEDERS
+-SEEDERS -Preencher tabela
    php artisan make:seeder [nome-da-seeder]
    php artisan db:seed
 -Models***
    php artisan make:model [nome-do-model]
+-Primeiros cadastros no banco de dados usando create
+  create
+     $filable
+     $guarded
 
 
 
