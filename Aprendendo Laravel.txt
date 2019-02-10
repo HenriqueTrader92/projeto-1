@@ -52,3 +52,16 @@ APRENDIZADO NO LARAVEL
 
 
 
+
+
+
+
+***Ao colocar o projeto em outra máquina deve-se lembrar de fazer os seguintes procedimentos...
+- composer update
+- php artisan key:generate
+- php artisan config:cache
+
+
+
+
+

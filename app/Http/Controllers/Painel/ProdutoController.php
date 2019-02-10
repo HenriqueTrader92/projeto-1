@@ -8,14 +8,16 @@ use App\Models\Painel\Product;
 
 class ProdutoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Product $product)
+    private $product;
+
+    public function __construct(Product $product)
     {
-        $products = $product->all();
+        $this->product = $product;
+    }
+
+    public function index()
+    {
+        $products = $this->product->all();
         return view('painel.products.index', compact('products'));
     }
 
@@ -83,5 +85,33 @@ class ProdutoController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function tests()
+    {
+        // $prod = $this->product;
+        // $prod->name = 'nome do produto';
+        // $prod->number = 1235;
+        // $prod->active = true;
+        // $prod->category = 'eletronicos';
+        // $prod->description = 'Descricao do produto';
+        // $insert = $prod->save();
+
+        // if($insert)
+        //     return 'Inserido com sucesso';
+        // else
+        //     return 'Falha ao inserir';
+            
+        $insert = $this->product->create([
+                        'name'        => 'Controle',
+                        'number'      => 123665,
+                        'active'      => false,
+                        'category'    => 'eletronicos',
+                        'description' => 'Botoes luminosos'
+                    ]);
+        if($insert)
+            return "Inserido com sucesso, ID:{$insert->id}";
+        else
+            return 'Falha ao inserir';
     }
 }
