@@ -6,3 +6,12 @@
 .c{
     text-align: center;
 }
+.btn-lilac.btn-push {
+    background: #906094;
+    box-shadow: 0 6px #724c75;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+  }

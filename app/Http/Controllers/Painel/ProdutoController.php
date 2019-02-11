@@ -30,7 +30,11 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Cadastrar novo produto';
+
+        $categorys = ['eletronicos', 'moveis', 'Limpeza', 'banho'];
+
+        return view('painel.products.create', compact('title', 'categorys'));
     }
 
     /**
@@ -41,7 +45,7 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'Cadastrando...';
     }
 
     /**
@@ -104,17 +108,17 @@ class ProdutoController extends Controller
         // else
         //     return 'Falha ao inserir';
             
-        // $insert = $this->product->create([
-        //                 'name'        => 'Controle',
-        //                 'number'      => 123665,
-        //                 'active'      => false,
-        //                 'category'    => 'eletronicos',
-        //                 'description' => 'Botoes luminosos'
-        //             ]);
-        // if($insert)
-        //     return "Inserido com sucesso, ID:{$insert->id}";
-        // else
-        //     return 'Falha ao inserir';
+        $insert = $this->product->create([
+                        'name'        => 'Chave de fenda',
+                        'number'      => 4457,
+                        'active'      => 1,
+                        'category'    => 'eletronicos',
+                        'description' => 'Aperta o seu anel'
+                    ]);
+        if($insert)
+            return "Inserido com sucesso, ID:{$insert->id}";
+        else
+            return 'Falha ao inserir';
 
         // $prod = $this->product->find(2);
         // $prod->name = 'update';
@@ -143,12 +147,12 @@ class ProdutoController extends Controller
         // else
         //     return 'Falha ao inserir';
 
-        $prod = $this->product->find(1);
-        $delete = $prod->delete();
+        // $prod = $this->product->find(1);
+        // $delete = $prod->delete();
 
-        if($delete)
-            return "Deletado com sucesso";
-        else
-            return 'Falha ao deletar';
+        // if($delete)
+        //     return "Deletado com sucesso";
+        // else
+        //     return 'Falha ao deletar';
     }
 }
