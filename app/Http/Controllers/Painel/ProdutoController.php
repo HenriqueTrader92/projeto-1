@@ -102,15 +102,42 @@ class ProdutoController extends Controller
         // else
         //     return 'Falha ao inserir';
             
-        $insert = $this->product->create([
-                        'name'        => 'Controle',
-                        'number'      => 123665,
-                        'active'      => false,
+        // $insert = $this->product->create([
+        //                 'name'        => 'Controle',
+        //                 'number'      => 123665,
+        //                 'active'      => false,
+        //                 'category'    => 'eletronicos',
+        //                 'description' => 'Botoes luminosos'
+        //             ]);
+        // if($insert)
+        //     return "Inserido com sucesso, ID:{$insert->id}";
+        // else
+        //     return 'Falha ao inserir';
+
+        // $prod = $this->product->find(2);
+        // $prod->name = 'update';
+        // $prod->number = 11;
+        // $prod->active = 1;
+        // $prod->category = 'eletronicos';
+        // $prod->description = 'Desc update';
+        // $insert = $prod->save();
+
+        // if($insert)
+        //     return "Inserido com sucesso";
+        // else
+        //     return 'Falha ao inserir';
+
+        $prod = $this->product->find(1);
+        $update = $prod->update([
+                        'name'        => 'teste 17',
+                        'number'      => 17,
+                        'active'      => 2,
                         'category'    => 'eletronicos',
                         'description' => 'Botoes luminosos'
-                    ]);
-        if($insert)
-            return "Inserido com sucesso, ID:{$insert->id}";
+        ]);
+
+        if($update)
+            return "Inserido com sucesso";
         else
             return 'Falha ao inserir';
     }
