@@ -35,6 +35,8 @@
    git commit -a -m "[comentario]" // '-a' vai direto para seu branche
 - MARGE
    git marge [nome-do-branche]
+- PULL - Pegar informações atualziadas dos arquivos
+   git pull
 
 USANDO GITHUB
 

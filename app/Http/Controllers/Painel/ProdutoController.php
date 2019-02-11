@@ -13,12 +13,14 @@ class ProdutoController extends Controller
     public function __construct(Product $product)
     {
         $this->product = $product;
+        $title = 'Listagem dos produtos';
     }
 
     public function index()
     {
+        $title = 'Listagem dos produtos';
         $products = $this->product->all();
-        return view('painel.products.index', compact('products'));
+        return view('painel.products.index', compact('products', 'title'));
     }
 
     /**
@@ -127,18 +129,26 @@ class ProdutoController extends Controller
         // else
         //     return 'Falha ao inserir';
 
-        $prod = $this->product->find(1);
-        $update = $prod->update([
-                        'name'        => 'teste 17',
-                        'number'      => 17,
-                        'active'      => 2,
-                        'category'    => 'eletronicos',
-                        'description' => 'Botoes luminosos'
-        ]);
+        // $prod = $this->product->find(1);
+        // $update = $prod->update([
+        //                 'name'        => 'teste 17',
+        //                 'number'      => 17,
+        //                 'active'      => 2,
+        //                 'category'    => 'eletronicos',
+        //                 'description' => 'Botoes luminosos'
+        // ]);
 
-        if($update)
-            return "Inserido com sucesso";
+        // if($update)
+        //     return "Inserido com sucesso";
+        // else
+        //     return 'Falha ao inserir';
+
+        $prod = $this->product->find(1);
+        $delete = $prod->delete();
+
+        if($delete)
+            return "Deletado com sucesso";
         else
-            return 'Falha ao inserir';
+            return 'Falha ao deletar';
     }
 }
