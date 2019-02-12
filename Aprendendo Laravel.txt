@@ -54,7 +54,9 @@ APRENDIZADO NO LARAVEL
      $filable
      $guarded
 -Melhorando textos com CSS ***Aprender bootstrap
-
+- Formularios
+- Requeste
+- Preenchendo formulario
 
 
 
