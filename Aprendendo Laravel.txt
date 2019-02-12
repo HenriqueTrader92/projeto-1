@@ -59,6 +59,8 @@ APRENDIZADO NO LARAVEL
 - Preenchendo formulario
 - Validando dados do formularios
 - Personalizando mensagens de erro...
+- Form request Validation - Outra forma de validação
+   php artisan make:request [nome do request]
 
 
 

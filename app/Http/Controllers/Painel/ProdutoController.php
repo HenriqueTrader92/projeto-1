@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Painel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Painel\Product;
+use App\Http\Requests\Painel\ProductFormRequest;
 
 class ProdutoController extends Controller
 {
@@ -43,7 +44,7 @@ class ProdutoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductFormRequest $request)
     {
         // dd($request->all()); //Todos os campos
         // dd($request->only(['name', 'number'])); //campos selecionados
@@ -57,19 +58,19 @@ class ProdutoController extends Controller
 
         // $this->validate($request, $this->product->rules);
 
-        $messages = [
-            'name.required' => 'O campo nome é de preenchimento obrigatório!',
-            'number.numeric' => 'O campo número só pode ser preenchido com números!',
-            'number.required' => 'O campo número é de preenchimento obrigatório!',           
-        ];
+        // $messages = [
+        //     'name.required' => 'O campo nome é de preenchimento obrigatório!',
+        //     'number.numeric' => 'O campo número só pode ser preenchido com números!',
+        //     'number.required' => 'O campo número é de preenchimento obrigatório!',           
+        // ];
 
-        $validate = Validator($dataForm, $this->product->rules, $messages);
-        if($validate->fails()){
-            return redirect()
-                    ->route('produtos.create')
-                    ->withErrors($validate)
-                    ->withInput();
-        }
+        // $validate = Validator($dataForm, $this->product->rules, $messages);
+        // if($validate->fails()){
+        //     return redirect()
+        //             ->route('produtos.create')
+        //             ->withErrors($validate)
+        //             ->withInput();
+        // }
 
         // Faz o cadastro
         $insert = $this->product->create($dataForm);
