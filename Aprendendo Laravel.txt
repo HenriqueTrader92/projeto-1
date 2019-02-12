@@ -57,6 +57,7 @@ APRENDIZADO NO LARAVEL
 - Formularios
 - Requeste
 - Preenchendo formulario
+- Validando dados do formulariostatus
 
 
 

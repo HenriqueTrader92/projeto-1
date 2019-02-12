@@ -10,12 +10,14 @@
 
     <table class="table table-bordered">
         <tr>
+            <th>ID</th>
             <th>Nome</th>
             <th>Descrição</th>
             <th class="c" width="200px">Ações</th>
         </tr>
         @foreach($products as $product)
             <tr>
+                <td>{{$product->id}}</td>
                 <td>{{$product->name}}</td>
                 <td>{{$product->description}}</td>
                 <td class="c">
