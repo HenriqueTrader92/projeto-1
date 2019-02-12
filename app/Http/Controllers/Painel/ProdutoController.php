@@ -55,7 +55,21 @@ class ProdutoController extends Controller
 
         $dataForm['active'] = ( !isset($dataForm['active']) == '') ? 0 : 1;
 
-        $this->validate($request, $this->product->rules);
+        // $this->validate($request, $this->product->rules);
+
+        $messages = [
+            'name.required' => 'O campo nome é de preenchimento obrigatório!',
+            'number.numeric' => 'O campo número só pode ser preenchido com números!',
+            'number.required' => 'O campo número é de preenchimento obrigatório!',           
+        ];
+
+        $validate = Validator($dataForm, $this->product->rules, $messages);
+        if($validate->fails()){
+            return redirect()
+                    ->route('produtos.create')
+                    ->withErrors($validate)
+                    ->withInput();
+        }
 
         // Faz o cadastro
         $insert = $this->product->create($dataForm);
