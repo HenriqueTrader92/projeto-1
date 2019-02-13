@@ -2,7 +2,11 @@
 
 @section('content')
 
+@if(isset($product))
+<h1 class="title-pg">Editar produto</h1>
+@else
 <h1 class="title-pg">Cadastrar produto</h1>
+@endif
 
 @if( isset($errors) && count($errors) > 0)
     <div class="alert alert-danger">
@@ -64,7 +68,11 @@
         @endif
     </div>
 
-    <button class="btn btn-primary">Cadastrar</button>
+    @if(isset($product))
+        <button class="btn btn-primary">Editar</button>
+    @else
+        <button class="btn btn-primary">Cadastrar</button>
+    @endif
 </form>
 
 @endsection

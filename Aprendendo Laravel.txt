@@ -62,7 +62,7 @@ APRENDIZADO NO LARAVEL
 - Form request Validation - Outra forma de validação
    php artisan make:request [nome do request]
 - Preparando para editar dados
-
+- Fazendo o update dos dados
 
 
 
