@@ -61,7 +61,7 @@ APRENDIZADO NO LARAVEL
 - Personalizando mensagens de erro...
 - Form request Validation - Outra forma de validação
    php artisan make:request [nome do request]
-
+- Preparando para editar dados
 
 
 

@@ -21,7 +21,7 @@
                 <td>{{$product->name}}</td>
                 <td>{{$product->description}}</td>
                 <td class="c">
-                    <a href="" class="actions edit">
+                    <a href="{{route('produtos.edit', $product->id)}}" class="actions edit">
                         <button type="button" class="btn btn-primary">Editar</button>
                     </a>
                     <a href="" class="actions delete">
