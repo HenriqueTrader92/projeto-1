@@ -63,6 +63,9 @@ APRENDIZADO NO LARAVEL
    php artisan make:request [nome do request]
 - Preparando para editar dados
 - Fazendo o update dos dados
+- Pacote Collective Form and HTML
+   https://laravelcollective.com/docs/5.4/html
+      composer require "laravelcollective/html":"^5.4.0"
 
 
 
