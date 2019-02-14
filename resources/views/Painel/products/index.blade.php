@@ -24,12 +24,14 @@
                     <a href="{{route('produtos.edit', $product->id)}}" class="actions edit">
                         <button type="button" class="btn btn-primary">Editar</button>
                     </a>
-                    <a href="" class="actions delete">
-                        <button type="button" class="btn btn-danger">Deletar</button>
+                    <a href="{{route('produtos.show', $product->id)}}" class="actions delete">
+                        <button type="button" class="btn btn-warning">Visualizar</button>
                     </a>
                 </td>
             </tr>
         @endforeach
     </table>
+
+{!! $products->links() !!}
 
 @endsection

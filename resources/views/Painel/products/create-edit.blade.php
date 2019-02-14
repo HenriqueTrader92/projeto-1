@@ -80,7 +80,7 @@
 
     @if(isset($product))
         <!-- <button class="btn btn-primary">Editar</button> -->
-        {!! Form::submit('Enviar', ['class' => 'btn btn-primary']) !!}
+        {!! Form::submit('Editar', ['class' => 'btn btn-primary']) !!}
     @else
         <!-- <button class="btn btn-primary">Cadastrar</button> -->
         {!! Form::submit('Cadastrar', ['class' => 'btn btn-primary']) !!}
